@@ -12,8 +12,8 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
 app.use(express.static('public'));
 
-require('app/helpers/api.js')(app);
-require('app/helpers/utils.js')(app);
+require('./app/helpers/api.js')(app);
+require('./app/helpers/utils.js')(app);
 
 app.listen(PORT, function(){
 	console.log("App listening on PORT " + PORT);
