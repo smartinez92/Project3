@@ -6,7 +6,7 @@ import request from 'request';
 
 var bodyParser = require("body-parser");
 var logger = require("morgan");
-//var mongoose = require("mongoose");
+var mongoose = require("mongoose");
 var passport = require('passport');
 var Promise = require("bluebird");
 mongoose.Promise = Promise;
@@ -25,45 +25,45 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(logger(':remote-addr - :remote-user [:date[clf]] ":method :url HTTP/:http-version" :status :res[content-length] :response-time ms'));
 
-// // Database configuration with mongoose
-// var options = {
-//     server: {
-//         socketOptions: {
-//             keepAlive: 300000,
-//             connectTimeoutMS: 30000
-//         }
-//     },
-//     replset: {
-//         socketOptions: {
-//             keepAlive: 300000,
-//             connectTimeoutMS: 30000
-//         }
-//     }
-// };
+// Database configuration with mongoose
+var options = {
+    server: {
+        socketOptions: {
+            keepAlive: 300000,
+            connectTimeoutMS: 30000
+        }
+    },
+    replset: {
+        socketOptions: {
+            keepAlive: 300000,
+            connectTimeoutMS: 30000
+        }
+    }
+};
 
-// var mongodburi = "";
-// mongoose.connect(mongodburi, options);
-// var db = mongoose.connection;
+var mongodburi = "";
+mongoose.connect(mongodburi, options);
+var db = mongoose.connection;
 
-// // Show any mongoose errors
-// db.on("error", function(error) {
-//     console.log("Mongoose Error: ", error);
-// });
+// Show any mongoose errors
+db.on("error", function(error) {
+    console.log("Mongoose Error: ", error);
+});
 
-// // Once logged in to the db through mongoose, log a success message
-// db.once("open", function() {
-//     console.log("Mongoose connection successful.");
-// });
+// Once logged in to the db through mongoose, log a success message
+db.once("open", function() {
+    console.log("Mongoose connection successful.");
+});
 
-// var expressSession = require('express-session');
-// var MongoStore = require('connect-mongo')(expressSession);
+var expressSession = require('express-session');
+var MongoStore = require('connect-mongo')(expressSession);
 
-// app.use(expressSession({
-//     secret: 'darkKnight',
-//     store: new MongoStore({mongooseConnection: mongoose.connection}),
-//     resave: false,
-//     saveUninitialized: false
-// }));
+app.use(expressSession({
+    secret: 'darkKnight',
+    store: new MongoStore({mongooseConnection: mongoose.connection}),
+    resave: false,
+    saveUninitialized: false
+}));
 
 //Configuring Passport
 
