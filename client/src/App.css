@@ -1,0 +1,608 @@
+.App {
+   height: 100%;
+   overflow: hidden;
+}
+
+html{
+   height: 100vh;
+   overflow: hidden;
+}
+
+body {
+ font-family: 'Cabin', sans-serif;
+ height:100%;
+ overflow: hidden;
+ background: white, /* For browsers that do not support gradients */;
+ background: -webkit-radial-gradient(white 45%, #f2d8ff 95%, #1b0028); /* Safari 5.1 to 6.0 */
+ background: -o-radial-gradient(white 45%, #f2d8ff 95%, #1b0028); /* For Opera 11.6 to 12.0 */
+ background: -moz-radial-gradient(white 45%, #f2d8ff 95%, #1b0028); /* For Firefox 3.6 to 15 */
+ background: radial-gradient(white 45%, #f2d8ff 95%, #1b0028); /* Standard syntax */
+}
+
+#root {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.button {
+ font-family: 'Cabin', sans-serif;
+}
+
+.
+
+#connectTwitchBtn{
+  margin-top: 15px;
+  font-size: 10px;
+}
+
+ /*Games displayed in the Bar*/
+.gamesList li{
+  max-width: 80px;
+  font-size: 10px;
+  display: inline-block;
+  list-style-type: none;
+  margin: 5px 8px 5px;
+
+}
+
+.gamesList {
+  max-width: auto;
+    height: 125px;
+    left: 2px;
+    overflow-x: visible;
+    white-space:nowrap;
+    margin-top: 20px;
+}
+
+.gameTitle {
+  line-height: 1.8em;
+  max-height: 1.8em;
+  font-size: 10px;
+  text-align: center;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  color:#7b61aa;
+}
+
+.gameTitle:hover{
+  color:#7b61aa;
+}
+
+.user {
+  color: white;
+  /*padding-left: 15px;*/
+  /*padding-top: 5px;*/
+}
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.fade-leave {
+  opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+  opacity: 0.01;
+  transition: opacity 700ms ease-in;
+}
+.chat-enter {
+  transform: translateX(100%);
+  transition: 0.3s transform ease-in-out;
+}
+.chat-enter-active {
+  transform: translateX(0);
+}
+.chat-leave {
+  transform: translateX(0);
+  transition: 0.3s transform ease-in-out;
+}
+.chat-leave-active {
+   transform: translateX(100%);
+}
+.slide {
+  animation: slide 0.5s ease-in forwards;
+}
+@keyframes slide {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.slide-back {
+  animation: slide-back 0.5s ease-out forwards;
+}
+@keyframes slide-back {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.toggleNav-enter {
+  transform: translateX(-100%);
+  transition: 0.3s transform ease-in-out;
+
+}
+.toggleNav-enter-active {
+  transform: translateX(0%);
+}
+.toggleNav-leave {
+  transform: translateX(0%);
+  transition: 0.3s transform ease-in-out;
+}
+.toggleNav-leave-active {
+   transform: translateX(-100%);
+}
+
+.toggleNavBar {
+
+  color: white;
+  background-color: black;
+  /*position: relative;*/
+  margin-right: 100%;
+  color: white;
+  height: 18px;
+  min-height: 18px;
+  width: 10px;
+  min-width: 10px;
+  margin-left: 200px;
+}
+.chatHamburger {
+  color: white;
+  height: 18px;
+  min-height: 18px;
+  width: 10px;
+  min-width: 10px;
+  margin-left: 7px;
+  margin-bottom: 5px;
+}
+.verticalBar {
+  color: white;
+  height: 18px;
+  min-height: 18px;
+  width: 10px;
+  min-width: 10px;
+  position: absolute;
+  top: 360px;
+}
+#sideBar {
+  width: 15px;
+}
+.chatToggle {
+  width: 25px;
+  height: 22px;
+  background-color: #6441a4;
+  border-radius: 25px 0px 0px 25px;
+}
+
+.chatToggleClose {
+  width: 25px;
+  height: 22px;
+  background-color: #6441a4;
+  border-radius: 25px 0px 0px 25px;
+}
+
+.hiddenNav {
+  background-color: black;
+  float: left;
+  height: 100%;
+  width: 20px;
+}
+
+#navLogoImg {
+  max-width: 50px;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.showBox2 {
+  margin-left: 215px;
+  /*transition: margin-left .3s;*/
+}
+.hideBox2 {
+  margin-left: 25px;
+  /*transition: margin-left .3s;*/
+}
+
+/*IC*/
+
+/*.hidden{
+  display: none;
+}*/
+
+iframe{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-width: 0;
+}
+
+
+input {
+  font-family: 'Cabin', sans-serif;
+
+}
+
+.menu button {
+  font-family: 'Cabin', sans-serif;
+}
+
+#navigation{
+  height: 300px;
+  text-align: center;
+}
+
+#navLogo {
+  padding-left: 0;
+  color: white;
+  font-size: 28px;
+}
+
+.playingStream {
+  left, top: 0;
+  margin-right: 10px;
+  height: 0;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 56.25%;
+}
+
+#primaryRow {
+  height: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row{
+  max-width: 100%;
+  overflow-y: scroll;
+}
+
+#searchform{
+  position: right;
+}
+
+.searchBar{
+  max-width: 180px;
+
+}
+
+a{
+  color: #fff;
+  width: 100%;
+}
+.glow:hover{
+ background-color: #7b61aa;
+color: #fff;
+}
+.glow.active{
+background-color: #7b61aa;
+color: #fff;
+}
+
+#logo{
+  max-height: 20px;
+  max-width:20px;
+}
+
+.linkList {
+  text-align: center;
+}
+
+.linkList a{
+  color: white;
+}
+
+#streamCanvas {
+  width: 100%;
+  text-align: left;
+}
+
+.streamContainer {
+  margin-top: 15px;
+  padding-right: 10px;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  -moz-flex: 0 1 auto;
+  /*background-color: #1c1e22;*/
+  z-index: 1;
+}
+
+.mainStream {
+  float: left;
+  width: 70%;
+}
+
+.otherStreams {
+  display: inline-table;
+  width: 22%;
+}
+
+
+#searchDiv {
+  display: inline-block;
+    margin-bottom: 10px;
+}
+
+#searchBar {
+  display: inline-block;
+}
+
+#searchClearButton {
+  background-color: #7b61aa;
+  color: white;
+  height: 30px;
+  width: 40px;
+  font-size: 10px;
+  font-family: 'Cabin', sans-serif;
+  margin-left: 5px;
+
+}
+
+.streamDelete {
+  height: 100%;
+  width: 100%;
+}
+
+.streamLink {
+  max-width: 200px;
+  margin-top: 25px;
+  overflow: hidden;
+  color: white;
+}
+
+.streamLinkImg {
+  pointer-events: none;
+}
+
+.streamLink:hover{
+  cursor: pointer;
+  color: #7b61aa;
+}
+
+.streamLinkImg {
+  width: 100%;
+}
+
+/*Small panel on stream link*/
+.streamCard {
+  background: black;
+  opacity: .7;
+  position: absolute;
+  top: 100px;
+  min-width: 200px;
+  width: 200px;
+  min-height: 41px;
+  height: 41px;
+}
+
+.streamCard:hover {
+  cursor: pointer;
+  color: #7b61aa;
+
+}
+
+.channelStatus, .channelName {
+  /*color: white;*/
+  width: 100%;
+  min-width: 100%;
+  margin-left: 5px;
+}
+
+.streamList{
+  position: relative;
+  max-height: 200px;
+  text-align: center;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+#centerColumn {
+  margin-left: 0;
+  padding-left: 0;
+  padding-right: 0;
+  height: 100%;
+}
+
+#chatColumn {
+  padding-left: 0;
+  padding-right: 0;
+  height: 100%;
+  background: transparent;
+}
+
+#theBar{
+
+  text-align: center;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.side-nav ul {
+  list-style: none;
+  background-color: #11001c;
+  margin-left: 0 ;
+
+}
+
+#toggleBar {
+  background-color:#11001c;
+  text-align: center;
+  height: 20px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.toggleButton {
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  height: 18px;
+  min-height: 18px;
+  width: 10px;
+  min-width: 10px;
+  z-index: 100;
+}
+
+
+
+.slideUP {
+    height: 0;
+    /*animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;*/
+    transition: height .30s;
+}
+
+.slideDown {
+    /*animation: slide-out 0.5s forwards;
+    -webkit-animation: slide-out 0.5s forwards;*/
+    transition:  height .3s;
+    height:176px;
+}
+
+@keyframes slide-in {
+    100% { transform: translateX(0%); }
+}
+
+@-webkit-keyframes slide-in {
+    100% { -webkit-transform: translateX(0%); }
+}
+
+@keyframes slide-out {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+@-webkit-keyframes slide-out {
+    0% { -webkit-transform: translateX(0%); }
+    100% { -webkit-transform: translateX(-100%); }
+}
+
+#navCol {
+  border-right: solid 2px #000;
+  height: 100%;
+  background-color: #11001c;
+
+}
+
+#navCol li > .active{
+background-color: #7b61aa;
+color: #fff;
+display: block;
+outline:0;
+margin:0;
+padding:0;
+}
+
+
+#navCol li > .hover{
+background-color: #7b61aa;
+color: #fff;
+display: block;
+}
+
+
+.streamLinkImg {
+  cursor: pointer;
+}
+
+#streamListDiv{
+  position: relative;
+  max-height: 200px;
+  text-align: center;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.streamlist{
+  position: absolute;
+  top:17px;
+  overflow-x: scroll;
+}
+
+.streamList li{
+  display: inline-block;
+  list-style-type: none;
+  margin: 5px 10px 5px 10px;
+  text-align: left;
+}
+
+.channelName {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 12px;
+}
+
+
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+.channelStatus {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 12px;
+  line-height: 1.8em;
+  max-height: 1.8em;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.streamViewers {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 10px;
+}
+
+#searchContainer .streamListDiv ul {
+  max-height: 10%;
+  overflow: hidden;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.toggleChatDiv {
+  float: right;
+  position: absolute;
+  top: 45%;
+  right: 0px;
+}
+
+.toggleChatDivClose {
+  position: absolute;
+  top: 45%;
+  right: 320px;
+
+}
+@import url(index2.css);
