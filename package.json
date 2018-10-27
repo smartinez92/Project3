@@ -2,11 +2,8 @@
   "name": "abz-twitch-room",
   "version": "1.0.0",
   "private": true,
-  "babel": {
-    "presets": [
-      "es2015",
-      "stage-0"
-    ]
+  "scripts": {
+    "start": "node server.js"
   },
   "dependencies": {
     "babel-cli": "^6.14.0",
@@ -31,10 +28,9 @@
     "request": "^2.88.0",
     "sql.js": "^0.3.2"
   },
-  "scripts": {
-    "start": "node server.js"
-  },
+  
   "devDependencies": {
     "concurrently": "^3.1.0"
-  }
+    }
 }
+
