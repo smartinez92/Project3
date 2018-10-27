@@ -4,7 +4,8 @@
   "description": "Weather app",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -35,6 +36,7 @@
     "body-parser": "^1.15.0",
     "express": "^4.16.4",
     "parser": "^0.1.4",
+    "path": "^0.12.7",
     "react": "^15.6.2",
     "react-dom": "^15.4.1",
     "react-router": "^3.0.0"
