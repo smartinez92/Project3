@@ -32,10 +32,7 @@
     "sql.js": "^0.3.2"
   },
   "scripts": {
-    "start": "node server.js",
-    "server": "babel-node server.js",
-    "client": "babel-node start-client.js",
-    "dev": "echo \"This command has been deprecated. Use 'npm start'\" && exit 1"
+    "start": "node server.js"
   },
   "devDependencies": {
     "concurrently": "^3.1.0"
