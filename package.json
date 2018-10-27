@@ -2,6 +2,11 @@
   "name": "abz-twitch-room",
   "version": "1.0.0",
   "private": true,
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0"
+    ]},
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
