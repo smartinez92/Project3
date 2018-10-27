@@ -67,10 +67,10 @@ app.use(expressSession({
 
 //Configuring Passport
 
-require('./src/Auth/passport.js')(passport);
+//require('./src/Auth/passport.js')(passport);
 
-app.use(passport.initialize());
-app.use(passport.session());
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 //====================================================================
 // ROUTES
