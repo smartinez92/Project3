@@ -1,4 +1,4 @@
-var axios = require('axios');
+//var axios = require('axios');
 var path = require('path');
 
 var _baseUrl = 'http://api.openweathermap.org/data/2.5/';
