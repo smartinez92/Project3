@@ -1,3 +1,5 @@
+var path = require('path');
+
 var daysMap = {
     "0":"Sunday",
     "1":"Monday",
