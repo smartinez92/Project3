@@ -6,7 +6,7 @@ import request from 'request';
 
 var bodyParser = require("body-parser");
 var logger = require("morgan");
-var mongoose = require("mongoose");
+//var mongoose = require("mongoose");
 var passport = require('passport');
 var Promise = require("bluebird");
 mongoose.Promise = Promise;
