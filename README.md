@@ -1,6 +1,6 @@
 # Song of Storms
 
-Zelda inspired minimalist weather app made with React.js in which users can check the climate conditions from cities all around the world.
+Zelda inspired weather app made with React.js in which users can check the climate conditions from cities all around the world.
 
 ## Technologies
 
