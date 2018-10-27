@@ -1,7 +1,7 @@
 var axios = require('axios');
 
 var _baseUrl = 'http://api.openweathermap.org/data/2.5/';
-var _apiKey = '&APPID=2e193fa8f7008682017fd9501e2c9d98';
+var _apiKey = '&APPID=19fae9d568a1dab3f68ffa4e2efa91e6';
 
 function getCityWeather(city) {
   return axios.get(_baseUrl + 'weather?q=' + city + _apiKey)

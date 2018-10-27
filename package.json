@@ -1,23 +1,23 @@
 {
-  "name": "windmill-hut",
+  "name": "project3",
   "version": "1.0.0",
   "description": "Weather app",
-  "main": "index.js",
+  "main": "Main.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node Main.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/smartinez92/Windmill-Hut.git"
+    "url": "git+https://github.com/smartinez92/Project3.git"
   },
   "keywords": [
     "react"
   ],
   "author": "Steven Martinez",
   "bugs": {
-    "url": "https://github.com/smartinez92/Windmill-Hut/issues"
+    "url": "https://github.com/smartinez92/Project3/issues"
   },
-  "homepage": "https://github.com/smartinez92/Windmill-Hut#readme",
+  "homepage": "https://github.com/smartinez92/Project3#readme",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^6.4.1",
@@ -38,5 +38,9 @@
     "react": "^15.6.2",
     "react-dom": "^15.4.1",
     "react-router": "^3.0.0"
+  },
+  "engines": {
+    "node": "8.12.0",
+    "npm": "6.4.1"
   }
 }

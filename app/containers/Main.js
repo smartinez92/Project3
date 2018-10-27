@@ -60,7 +60,7 @@ var Main = React.createClass({
       <div style={styles.mainContainer}>
         
         <div style={styles.container}>
-          <h2 style={styles.header}>Windmill Hut</h2>
+          <h2 style={styles.header}>Song of Storms</h2>
           
           <form onSubmit={this.handleSubmitCity} style={styles.formContainer}>
             <div>

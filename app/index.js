@@ -8,23 +8,32 @@ ReactDOM.render(
   
 )
 
-var express = require('express');
-var bodyParser = require('body-parser');
+const express = require("express");
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+const routes = require("./routes");
+const app = express();
+const PORT = process.env.PORT || 3001;
 
-var app = express();
-var PORT = process.env.PORT || 3030;
-var path = require('path');
-
+// Configure body parser for AJAX requests
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.text());
-app.use(bodyParser.json({type:'application/vnd.api+json'}));
+// Serve up static assets
+app.use(express.static("client/build"));
+// Add routes, both API and view
+app.use(routes);
 
-app.use(express.static('public'));
+// Set up promises with mongoose
+mongoose.Promise = global.Promise;
+// Connect to the Mongo DB
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist",
+  {
+    useMongoClient: true
+  }
+);
 
-require('./app/routing/apiRoutes.js')(app);
-require('./app/routing/htmlRoutes.js')(app);
-
-app.listen(PORT, function(){
-	console.log("App listening on PORT " + PORT);
+// Start the API server
+app.listen(PORT, function() {
+  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
