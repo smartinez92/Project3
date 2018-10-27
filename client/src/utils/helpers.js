@@ -23,7 +23,7 @@ var helpers = {
     var headers = {
       response_type: "code",
       client_id: process.env.TWITCH_CLIENT || Twitch.clientID,
-      redirect_uri: "http://twitchavid.herokuapp.com",
+      redirect_uri: "https://still-tundra-12001.herokuapp.com/",
       scope: "user_read channel_read user_follows_edit",
       force_verify: "true"
     };
@@ -41,7 +41,7 @@ var helpers = {
     var headers = {
       client_id: process.env.TWITCH_CLIENT || Twitch.clientID,
       client_secret: process.env.TWITCH_SECRET || Twitch.secret,
-      redirect_uri: "http://twitchavid.herokuapp.com",
+      redirect_uri: "https://still-tundra-12001.herokuapp.com/",
       grant_type: "authorization_code",
       code: code
     };

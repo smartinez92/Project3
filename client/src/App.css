@@ -28,7 +28,6 @@ body {
  font-family: 'Cabin', sans-serif;
 }
 
-.
 
 #connectTwitchBtn{
   margin-top: 15px;
@@ -250,7 +249,7 @@ input {
 }
 
 .playingStream {
-  left, top: 0;
+  border-top-left-radius: 0;
   margin-right: 10px;
   height: 0;
   width: 100%;

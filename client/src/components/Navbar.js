@@ -70,7 +70,7 @@ class Navbar extends Component {
           <div className="side-nav">
             <ul style={this.style}>
 
-              <MenuText id="navLogo">Twitch Avid <img id="navLogoImg" src={TAVreal}/> </MenuText>
+              <MenuText id="navLogo">Abz Twitch Room <img id="navLogoImg" src={TAVreal}/> </MenuText>
               <User setCurrentUser={this.props.setCurrentUser} user={this.props.user} token= {this.props.token}/>
               <Button id="connectTwitchBtn" size={Sizes.SMALL} onClick={!this.props.token ? Helpers.authorize : Helpers.logout}>{this.props.token ? 'Sign Out' : 'Connect with Twitch'}</Button>
 
